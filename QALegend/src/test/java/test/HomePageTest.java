@@ -12,7 +12,7 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class HomePageTest extends Base{
-	@Test(priority=4,groups="Regression",retryAnalyzer=RetryAnalyser.class)
+	@Test(priority=4,groups="Regression")
 	public void verifyHomePageTitle() 
 	{
 	String userName =ExcelUtility.readStringData(2,0 ,Constants.LOGIN_PAGE_DATA);
@@ -24,7 +24,7 @@ public class HomePageTest extends Base{
 	String actual_Title = driver.getTitle();
 	HomePage homeobj= loginobj.clickOnEndTour();
 	System.out.println(actual_Title);
-	String expected_Title = ExcelUtility.readStringData(0,0, Constants.HOME_PAGE_DATA)+"123";
+	String expected_Title = ExcelUtility.readStringData(0,0, Constants.HOME_PAGE_DATA);
 	Assert.assertEquals(actual_Title, expected_Title, Messages.TITLE_MISMATCH);
 }
 	@Test(priority=5,groups="Regression")

@@ -3,6 +3,7 @@
 <suite name="Functional Suite">
 		<listeners>
 		<listener class-name="listeners.AnnotationTransformer"/>
+		<listener class-name="listeners.ExtendListeners"/>
 	    </listeners>
     <test name="Test">
 		<parameter name="browser" value="Chrome"></parameter>

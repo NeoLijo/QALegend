@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-30T16:44:38 IST" name="Functional Suite" finished-at="2024-04-30T16:46:02 IST" duration-ms="84785">
+    <groups>
+      <group name="Sanity">
+        <method signature="ManageUserPageTest.verifyManageUserTittle()[pri:8, instance:test.ManageUserPageTest@441772e]" name="verifyManageUserTittle" class="test.ManageUserPageTest"/>
+        <method signature="ResetPageTest.verifyErrorMessageWithInvalidEmailid()[pri:7, instance:test.ResetPageTest@61862a7f]" name="verifyErrorMessageWithInvalidEmailid" class="test.ResetPageTest"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="HomePageTest.verifyHomePageTitle()[pri:4, instance:test.HomePageTest@1cbbffcd]" name="verifyHomePageTitle" class="test.HomePageTest"/>
+        <method signature="HomePageTest.verifyUserLoginDate()[pri:5, instance:test.HomePageTest@1cbbffcd]" name="verifyUserLoginDate" class="test.HomePageTest"/>
+        <method signature="ResetPageTest.verifyResetPageTitle()[pri:6, instance:test.ResetPageTest@61862a7f]" name="verifyResetPageTitle" class="test.ResetPageTest"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="ResetPageTest.verifyResetPageTitle()[pri:6, instance:test.ResetPageTest@61862a7f]" name="verifyResetPageTitle" class="test.ResetPageTest"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2024-04-30T16:44:38 IST" name="Test" finished-at="2024-04-30T16:46:02 IST" duration-ms="84785">
+      <class name="test.ResetPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:14 IST" name="setup" finished-at="2024-04-30T16:45:19 IST" duration-ms="5594" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyResetPageTitle()[pri:6, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:19 IST" name="verifyResetPageTitle" finished-at="2024-04-30T16:45:28 IST" duration-ms="8914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyResetPageTitle -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:28 IST" name="closeBrowser" finished-at="2024-04-30T16:45:29 IST" duration-ms="552" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyResetPageTitle status=SUCCESS method=ResetPageTest.verifyResetPageTitle()[pri:6, instance:test.ResetPageTest@61862a7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:29 IST" name="setup" finished-at="2024-04-30T16:45:40 IST" duration-ms="10803" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyErrorMessageWithInvalidEmailid()[pri:7, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:40 IST" name="verifyErrorMessageWithInvalidEmailid" finished-at="2024-04-30T16:45:42 IST" duration-ms="2871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMessageWithInvalidEmailid -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.ResetPageTest@61862a7f]" started-at="2024-04-30T16:45:43 IST" name="closeBrowser" finished-at="2024-04-30T16:45:43 IST" duration-ms="546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyErrorMessageWithInvalidEmailid status=SUCCESS method=ResetPageTest.verifyErrorMessageWithInvalidEmailid()[pri:7, instance:test.ResetPageTest@61862a7f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.ResetPageTest -->
+      <class name="test.HomePageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:44:38 IST" name="setup" finished-at="2024-04-30T16:44:49 IST" duration-ms="11581" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyHomePageTitle()[pri:4, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:44:49 IST" name="verifyHomePageTitle" finished-at="2024-04-30T16:44:56 IST" duration-ms="6693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:44:56 IST" name="closeBrowser" finished-at="2024-04-30T16:44:56 IST" duration-ms="353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHomePageTitle status=SUCCESS method=HomePageTest.verifyHomePageTitle()[pri:4, instance:test.HomePageTest@1cbbffcd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:44:56 IST" name="setup" finished-at="2024-04-30T16:45:08 IST" duration-ms="11509" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginDate()[pri:5, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:45:08 IST" name="verifyUserLoginDate" finished-at="2024-04-30T16:45:13 IST" duration-ms="5222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginDate -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.HomePageTest@1cbbffcd]" started-at="2024-04-30T16:45:13 IST" name="closeBrowser" finished-at="2024-04-30T16:45:14 IST" duration-ms="573" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginDate status=SUCCESS method=HomePageTest.verifyUserLoginDate()[pri:5, instance:test.HomePageTest@1cbbffcd] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.HomePageTest -->
+      <class name="test.ManageUserPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:test.ManageUserPageTest@441772e]" started-at="2024-04-30T16:45:43 IST" name="setup" finished-at="2024-04-30T16:45:49 IST" duration-ms="6445" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://qalegend.com/billing/public/login]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyManageUserTittle()[pri:8, instance:test.ManageUserPageTest@441772e]" started-at="2024-04-30T16:45:49 IST" name="verifyManageUserTittle" finished-at="2024-04-30T16:46:02 IST" duration-ms="12536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManageUserTittle -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:test.ManageUserPageTest@441772e]" started-at="2024-04-30T16:46:02 IST" name="closeBrowser" finished-at="2024-04-30T16:46:02 IST" duration-ms="437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyManageUserTittle status=SUCCESS method=ManageUserPageTest.verifyManageUserTittle()[pri:8, instance:test.ManageUserPageTest@441772e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.ManageUserPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Functional Suite -->
+</testng-results>

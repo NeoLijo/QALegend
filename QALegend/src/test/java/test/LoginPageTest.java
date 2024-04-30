@@ -6,7 +6,6 @@ import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.annotations.DataProvider;
 import dataProvider.Dataproviders;
 import pages.HomePage;
 import pages.LoginPage;

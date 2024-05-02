@@ -5,9 +5,10 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 
 public class WaitUtility {
-public void waitUsingImplicitWait(WebDriver driver)
+	public static final long IMPLICIT_WAIT=10;
+public static void waitUsingImplicitWait(WebDriver driver)
 {
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICIT_WAIT));
 	
 }
 }

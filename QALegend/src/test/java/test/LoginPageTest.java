@@ -1,6 +1,6 @@
 package test;
 
-import org.Base;
+import org.automation_core.Base;
 import org.selenium.constants.Constants;
 import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
@@ -31,7 +31,6 @@ public void verifyUserLoginwithValidCredentials()
 		HomePage home= new HomePage(driver);
 		HomePage home_page=loginobj.clickOnLoginButton();
 		String user_name=home.getLoggedUser();
-		//String expected_username="Welcome XYZ,";
 		String expected_username=ExcelUtility.readStringData(0, 3, Constants.LOGIN_PAGE_DATA);
 		Assert.assertEquals(user_name, expected_username,Messages.LOGIN_MISMATCH);
 		}
@@ -44,10 +43,10 @@ public void verifyUserLoginwithValidCredentials()
 		LoginPage loginobj=new LoginPage(driver);
 		loginobj.enterUserName(username);
 		loginobj.enterPassword(password);
-		HomePage home= new HomePage(driver);
+		
 		HomePage home_user=loginobj.clickOnLoginButton();
-		String user_name=home.getLoggedUser();
-	    String error_actual=loginobj.userGetText();
+		String error_actual=loginobj.userGetText();
+		System.out.println(error_actual);
         Assert.assertEquals(error_actual, expected,Messages.LOGIN_FAILED_WARNING_MESSAGE_NOT_FOUND);
 	}
 }

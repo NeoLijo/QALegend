@@ -24,8 +24,7 @@ public class Extend_Manager {
         return extent;
     }
 
-    //Create an extent report instance
-    public static ExtentReports createInstance() {
+        public static ExtentReports createInstance() {
         platform = getCurrentPlatform();
         String fileName = getReportFileLocation(platform);
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
@@ -35,15 +34,12 @@ public class Extend_Manager {
         htmlReporter.config().setDocumentTitle(fileName);
         htmlReporter.config().setEncoding("utf-8");
         htmlReporter.config().setReportName(fileName);
-
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-
         return extent;
     }
 
-    //Select the extent report file location based on platform
-    private static String getReportFileLocation(Platform platform) {
+       private static String getReportFileLocation(Platform platform) {
         String reportFileLocation = null;
         switch (platform) {
             case MAC:
@@ -63,8 +59,7 @@ public class Extend_Manager {
         return reportFileLocation;
     }
 
-    //Create the report path if it does not exist
-    private static void createReportPath(String path) {
+       private static void createReportPath(String path) {
         File testDirectory = new File(path);
         if (!testDirectory.exists()) {
             if (testDirectory.mkdir()) {
@@ -77,8 +72,7 @@ public class Extend_Manager {
         }
     }
 
-    //Get current platform
-    private static Platform getCurrentPlatform() {
+       private static Platform getCurrentPlatform() {
         if (platform == null) {
             String operSys = System.getProperty("os.name").toLowerCase();
             if (operSys.contains("win")) {

@@ -2,11 +2,12 @@ package test;
 
 import java.time.Duration;
 
-import org.Base;
+import org.automation_core.Base;
 import org.selenium.constants.Constants;
 import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
 import org.selenium.utilities.RandomDataUtility;
+import org.selenium.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -28,15 +29,14 @@ public class AddUserPageTest extends Base {
 	HomePage home= new HomePage(driver);
 	HomePage home_=login.clickOnLoginButton();
 	home.clickOnEndTour();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WaitUtility.waitUsingImplicitWait(driver);
 	home.clickOnUserManagement();
 	ManageUserPage manage=home.clickOnUsers();
 	ManageUserPage manageuser= new ManageUserPage(driver);
 	AddUserPage adduser=manageuser.clickOnAddButton();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WaitUtility.waitUsingImplicitWait(driver);
 	AddUserPage add_user= new AddUserPage(driver);
 	String acutal_tittle=add_user.getTittle();
-	//System.out.println(acutal_tittle);
 	String expected_tittle=ExcelUtility.readStringData(0,1, Constants.ADD_USER_DATA);
 	Assert.assertEquals(acutal_tittle, expected_tittle,Messages.TITLE_MISMATCH);
 	}
@@ -53,12 +53,12 @@ public class AddUserPageTest extends Base {
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 		home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		ManageUserPage manage=home.clickOnUsers();
 		ManageUserPage manageuser= new ManageUserPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		AddUserPage add_user= new AddUserPage(driver);
 		String prefix=ExcelUtility.readStringData(0, 0, Constants.ADD_USER_DATA);
 		String firstname=RandomDataUtility.getFirstName();
@@ -75,15 +75,15 @@ public class AddUserPageTest extends Base {
 		add_user.enterPassword(pass_word);
 		add_user.enterConPassword(con_pass);
 		ManageUserPage manage_s=add_user.clickOnSubmitButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		manageuser.clickOnSearch();
 		String search_user=email;
 		manageuser.enterSearchValue(search_user);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		String actual_user=manageuser.getSerachUser();
 		Assert.assertEquals(actual_user, user_name,Messages.USER_CREATION_FAILED);
 }
-	@Test(priority=11,groups="Sanity")
+	@Test(priority=11,groups="Sanity",retryAnalyzer=RetryAnalyser.class)
 	public void verifyUserLoginWithNewlyAddedUsers()
 	{
 		String username=ExcelUtility.readStringData(2, 0, Constants.LOGIN_PAGE_DATA);
@@ -94,12 +94,12 @@ public class AddUserPageTest extends Base {
 		HomePage home= new HomePage(driver);
 		HomePage home_=login.clickOnLoginButton();
 	 	home.clickOnEndTour();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	 	WaitUtility.waitUsingImplicitWait(driver);
 		home.clickOnUserManagement();
 		ManageUserPage manage=home.clickOnUsers();
 		ManageUserPage manageuser= new ManageUserPage(driver);
 		AddUserPage adduser=manageuser.clickOnAddButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		AddUserPage add_user= new AddUserPage(driver);
 		String firstName= RandomDataUtility.getFirstName();
 		String lastname= RandomDataUtility.getLasttName();
@@ -115,7 +115,7 @@ public class AddUserPageTest extends Base {
 		ManageUserPage manage_s=add_user.clickOnSubmitButton();
 		manage.clickOnUserName();
 		LoginPage relog=manageuser.clickOnLogOut();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		String username_re=user_name;
 		String password_re=pass_word;
 		LoginPage login_re= new LoginPage(driver);
@@ -123,7 +123,7 @@ public class AddUserPageTest extends Base {
 		login.enterPassword(password_re);
 		HomePage home1= new HomePage(driver);
 		HomePage home_2=login.clickOnLoginButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		WaitUtility.waitUsingImplicitWait(driver);
 		String actual_user=home_2.getLoggedUser();
 		String expected_user="Welcome "+firstName+",";
 		Assert.assertEquals(actual_user, expected_user,Messages.RELOGIN_FAILED);

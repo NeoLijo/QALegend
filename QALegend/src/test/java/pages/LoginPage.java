@@ -30,7 +30,7 @@ WebDriver driver;
 	@FindBy(xpath = "//input[@name='remember']")
 	WebElement rememberMeCheckBox;
 	
-	@FindBy(xpath =" //span[text()='These credentials do not match our records.']")
+	@FindBy(xpath =" //span[@class='help-block']//strong")
 	WebElement errormessage;
 	@FindBy (xpath ="//button[@class='btn btn-default btn-sm']")
 	WebElement endtour;

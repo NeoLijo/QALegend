@@ -2,10 +2,11 @@ package test;
 
 import java.time.Duration;
 
-import org.Base;
+import org.automation_core.Base;
 import org.selenium.constants.Constants;
 import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
+import org.selenium.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,7 +26,7 @@ public class ManageUserPageTest extends Base{
 	HomePage home= new HomePage(driver);
 	HomePage home_=login.clickOnLoginButton();
 	home.clickOnEndTour();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WaitUtility.waitUsingImplicitWait(driver);
 	home.clickOnUserManagement();
 	ManageUserPage manage=home.clickOnUsers();
 	ManageUserPage manageuser= new ManageUserPage(driver);

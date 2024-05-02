@@ -17,7 +17,9 @@ public class ExcelUtility {
 	  	   
 	public static String readStringData(int row, int column, String sheetname) 
 	{
-		try{f= new FileInputStream(Constants.TEST_DATA_EXCELPATH);
+		try{
+			String path=Constants.HOME_DIRECTORY+Constants.TEST_DATA_EXCELPATH;
+			f= new FileInputStream(path);
 		w= new XSSFWorkbook(f);
 		s= w.getSheet(sheetname);
 		Row r= s.getRow(row);
@@ -30,7 +32,9 @@ public class ExcelUtility {
 }
 	
 	public static String readIntegerData(int row, int column, String sheetname)  {
-		try{f= new FileInputStream(Constants.TEST_DATA_EXCELPATH);
+		try{
+			String path=Constants.HOME_DIRECTORY+Constants.TEST_DATA_EXCELPATH;
+			f= new FileInputStream(path);
 		w= new XSSFWorkbook(f);
 		s= w.getSheet(sheetname);
 		Row r= s.getRow(row);

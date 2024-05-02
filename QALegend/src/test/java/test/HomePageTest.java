@@ -1,9 +1,10 @@
 package test;
 
-import org.Base;
+import org.automation_core.Base;
 import org.selenium.constants.Constants;
 import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
+import org.selenium.utilities.WaitUtility;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,11 +24,13 @@ public class HomePageTest extends Base{
 	HomePage home = loginobj.clickOnLoginButton();
 	String actual_Title = driver.getTitle();
 	HomePage homeobj= loginobj.clickOnEndTour();
+	WaitUtility.waitUsingImplicitWait(driver);
 	System.out.println(actual_Title);
 	String expected_Title = ExcelUtility.readStringData(0,0, Constants.HOME_PAGE_DATA);
 	Assert.assertEquals(actual_Title, expected_Title, Messages.TITLE_MISMATCH);
 }
-	@Test(priority=5,groups="Regression")
+
+	@Test(priority=5,groups="Regression",retryAnalyzer=RetryAnalyser.class)
 	
 public void verifyUserLoginDate()
 {
@@ -43,3 +46,4 @@ public void verifyUserLoginDate()
 	Assert.assertEquals(actual_logindate, expected_logindate,Messages.LOGIN_DATE_FAILED);
 }
 }
+

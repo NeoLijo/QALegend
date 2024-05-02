@@ -1,4 +1,4 @@
-package org;
+package org.automation_core;
 
 import java.io.File;
 import java.io.IOException;

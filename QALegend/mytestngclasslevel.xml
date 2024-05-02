@@ -5,9 +5,8 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="baseurl" value="https://qalegend.com/billing/public/login"/>
         <classes>
-                       <class name="test.HomePageTest"/>
-                       <class name="test.ResetPageTest"/>
-                       <class name="test.ManageUserPageTest"/>
+                       <class name="test.LoginPageTest"/>
+                                        
    		</classes>
 	</test>   
 </suite>

@@ -1,6 +1,6 @@
 package test;
 
-import org.Base;
+import org.automation_core.Base;
 import org.selenium.constants.Constants;
 import org.selenium.constants.Messages;
 import org.selenium.utilities.ExcelUtility;
